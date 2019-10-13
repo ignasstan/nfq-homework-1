@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Nfq\\": "Nfq/"
+    }
+  },
+  "require": {
+    "league/climate": "^3.5"
+  }
+}
