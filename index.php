@@ -2,9 +2,9 @@
 
 require_once ('vendor/autoload.php');
 
-function calculateHomeWorkSum(...$numbers)
+function calculateHomeWorkSum( ...$numbers)
 {
-    return array_sum($numbers);
+    return __FUNCTION__ . ': ' . array_sum($numbers);
 }
 
 try {
@@ -14,19 +14,19 @@ try {
 }
 
 try {
-    echo \Nfq\Akademija\NotTyped\calculateHomeWorkSum(3, 2.2, '1') . "\n";
+    echo 'Nfq\Akademija\NotTyped\calculateHomeWorkSum: ' . \Nfq\Akademija\NotTyped\calculateHomeWorkSum(3, 2.2, '1') . "\n";
 } catch (Throwable $exp) {
     echo'Klaida: ' . $exp . "\n";
 }
 
 try {
-    echo \Nfq\Akademija\Soft\calculateHomeWorkSum(3, 2.2, '1') . "\n";
+    echo 'Nfq\Akademija\Soft\calculateHomeWorkSum: ' . \Nfq\Akademija\Soft\calculateHomeWorkSum(3, 2.2, '1') . "\n";
 } catch (Throwable $exp) {
     echo 'Klaida: ' . $exp . "\n";
 }
 
 try {
-    echo \Nfq\Akademija\Strict\calculateHomeWorkSum(3, 2.2, '1') . "\n";
+    echo 'Nfq\Akademija\Strict\calculateHomeWorkSum: ' . \Nfq\Akademija\Strict\calculateHomeWorkSum(3, 2.2, '1') . "\n";
 } catch (Throwable $exp) {
     echo 'Klaida: ' . $exp . "\n";
 }

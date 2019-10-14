@@ -1,8 +1,13 @@
 {
   "autoload": {
     "psr-4": {
-      "Nfq\\": "Nfq/"
-    }
+      "Nfq\\": "app/"
+    },
+    "files": [
+      "app/Akademija/NotTyped/NotTyped.php",
+      "app/Akademija/Soft/Soft.php",
+      "app/Akademija/Strict/Strict.php"
+    ]
   },
   "require": {
     "league/climate": "^3.5"

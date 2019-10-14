@@ -5,5 +5,5 @@ namespace Nfq\Akademija\Strict;
 
 function calculateHomeWorkSum(int...$numbers): int
 {
-    return __FUNCTION__ . ': ' . array_sum($numbers);
+    return array_sum($numbers);
 }
