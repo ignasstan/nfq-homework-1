@@ -31,9 +31,16 @@ try {
     echo 'Klaida: ' . $exp . "\n";
 }
 
-//try {
-//    $climate = new League\CLImate\CLImate;
-//    $climate->out('This prints to the terminal.');
-//} catch (Throwable $exp) {
-//    echo 'Klaida: ' . $exp . "\n";
-//}
+try {
+    $consoleColor = new JakubOnderka\PhpConsoleColor\ConsoleColor();
+
+    for ($i = 1; $i <= 255; $i++) {
+        echo $consoleColor->apply("bg_color_$i", str_pad($i, 6, ' ', STR_PAD_BOTH));
+
+        if ($i % 15 === 0) {
+            echo "\n";
+        }
+    }
+} catch (Throwable $exp) {
+    echo 'Klaida: ' . $exp . "\n";
+}
